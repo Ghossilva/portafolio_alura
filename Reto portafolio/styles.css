@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F5F5F5;
+    font-family: 'Raleway', sans-serif;
+}
+
+.contenedor {
+    padding: 16px 5vw;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    font-weight: 300;
+}
+
+.link:hover {
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.cabecera {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.cabecera--titulo {
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+.cabecera--menu {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.descripcion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.descripcion--contenedor {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 60vw;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.descripcion--titulo {
+    font-size: 52px;
+    font-weight: 700;
+}
+
+.descripcion--imagen img {
+    border-radius: 50%;
+    width: 100%;
+    max-width: 200px;
+}
+
+.descripcion--descripcion {
+    font-size: 22px;
+}
+
+.descripcion--link {
+    display: flex;
+    gap: 20px;
+}
+
+.sobremi {
+    background-color: #EAF2FD;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 64px 5.5vw;
+}
+
+.sobremi--titulo {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.sobremi--descripcion {
+    font-size: 16px;
+    text-align: left;
+}
+
+.sobremi--firma {
+    padding-top: 20px;
+}
+
+.skills--titulo {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 88px;
+    margin-bottom: 16px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    padding: 0 5vw;
+}
+
+.recuadro {
+    width: calc(16.666% - 16px); /* Mantiene 6 recuadros */
+    height: 250px; /* Fijamos una altura constante */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centra contenido verticalmente */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.recuadro--imagen {
+    width: 50%;
+    height: 120px; /* Asegura que todas las imágenes tengan la misma altura */
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
+.recuadro--texto {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Para la sección de Formación Académica */
+.recuadro-formacion {
+    width: calc(33.333% - 16px); /* Esto se mantiene igual para 3 recuadros */
+    height: 250px; /* Altura igual que los recuadros de Skills */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centra contenido verticalmente */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.recuadro-formacion--imagen {
+    width: 50%;
+    height: 120px; /* Asegura que todas las imágenes tengan la misma altura */
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
+.recuadro-formacion--texto {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.recuadro:hover, .recuadro-formacion:hover {
+    transform: scale(1.1);
+    background-color: #f2f2f2;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.recuadro:hover .recuadro--texto, .recuadro-formacion:hover .recuadro--texto {
+    color: #333;
+}
+
+.skills--contenedor, .formacion--contenedor {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+.experiencia--titulo {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 88px;
+    margin-bottom: 32px;
+}
+
+.proyecto {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.proyecto--imagen {
+    width: 100%;
+    max-width: 752px;
+    height: auto;
+    object-fit: cover;
+}
+
+.proyecto--contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.proyecto--titulo {
+    font-weight: bold;
+    font-size: 24px;
+    margin: 0;
+}
+
+.proyecto--descripcion {
+    font-size: 16px;
+    margin: 0;
+}
+
+.proyecto--botones {
+    display: flex;
+    gap: 8px;
+}
+
+.proyecto--boton {
+    display: inline-block;
+    padding: 12px 16px;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.repositorio {
+    border: 2px solid #2A7AE4;
+    color: #2A7AE4;
+    background-color: transparent;
+}
+
+.demo {
+    background-color: #2A7AE4;
+    color: white;
+    border: none;
+}
+
+.proyecto--boton:hover {
+    opacity: 0.8;
+}
+
+/* Sección Formulario */
+#formulario {
+    background-color: #EAF2FD;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center; /* Centra todo el contenido horizontalmente */
+}
+
+.formulario {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra los elementos dentro de formulario */
+    gap: 30px;
+    max-width: 1200px; /* Limita el ancho máximo */
+    width: 100%;
+}
+
+.formulario--imagen {
+    display: block; /* Asegura que la imagen se muestre */
+    width: 50%; /* Aumenta el tamaño de la imagen */
+    max-width: 350px;
+    object-fit: cover;
+}
+
+.formulario--contenido {
+    width: 100%;
+    max-width: 600px; /* Ajusta el tamaño del contenido */
+}
+
+.formulario--titulo {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+.formulario--label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.formulario--input,
+.formulario--textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+.formulario--textarea {
+    resize: none;
+}
+
+.formulario--boton {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formulario--boton:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #2A7AE4;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Asegurar que los elementos se ajusten */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  section {
+    padding: 20px;
+    margin-bottom: 40px;
+  }
+  
+  h2, h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  
+

@@ -1,0 +1,173 @@
+/* Ajustes para versión tablet (pantallas con un ancho máximo de 768px) */
+@media (max-width: 768px) {
+    /* Cabecera */
+    .cabecera--menu {
+        display: none; /* Ocultar los enlaces de la cabecera (Sobre mí, Skills, Hobbies, Formación, Proyectos) */
+    }
+
+    .cabecera--titulo {
+        width: 100%;
+        display: flex;
+        flex-direction: column; /* Centrar el contenido */
+        justify-content: center;
+        text-align: center; /* Centrar el texto */
+    }
+
+    .cabecera--titulo .foto {
+        width: 120px; /* Tamaño ajustado para la foto */
+        height: 120px;
+        object-fit: cover;
+        border-radius: 50%; /* Hacer la foto redonda */
+        margin: 20px 0; /* Espaciado encima y debajo de la foto */
+        align-self: center; /* Centrar la foto */
+    }
+
+    .cabecera--titulo .email {
+        font-size: 20px; /* Tamaño ajustado para el correo */
+        margin-top: 10px; /* Espaciado superior */
+    }
+
+    /* Formación Académica (poner los recuadros uno debajo del otro) */
+    .formacion--contenedor {
+        display: flex;
+        flex-direction: column; /* Apilar los recuadros uno debajo del otro */
+        gap: 16px;
+        align-items: center; /* Centrar los recuadros */
+    }
+
+    .recuadro-formacion {
+        width: 100%; /* Ancho al 100% */
+        height: auto; /* Altura automática */
+    }
+
+    /* Skills y Hobbies (ajustar para 2 filas de 3 columnas) */
+    .skills, .hobbies {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .recuadro {
+        width: calc(33.333% - 16px); /* Tres recuadros en la fila */
+        height: 250px;
+    }
+
+    /* Formulario de contacto - ocultar la imagen de contacto */
+    .formulario--contacto .imagen-contacto {
+        display: none; /* Ocultar la imagen de contacto */
+    }
+
+    /* Proyectos - Ajustar la posición de imagen y botones */
+    .proyecto {
+        display: flex;
+        flex-direction: column; /* Apilar los elementos en columna */
+        align-items: center;
+        gap: 16px; /* Espacio entre la imagen y los botones */
+    }
+
+    .proyecto--imagen {
+        order: 1; /* Asegura que la imagen esté primero */
+    }
+
+    .proyecto--contenido {
+        order: 2; /* Los botones van después de la imagen */
+    }
+
+    .proyecto--botones {
+        display: flex;
+        flex-direction: column; /* Los botones se apilan en columna */
+        gap: 8px;
+        align-items: center; /* Centra los botones */
+    }
+
+    .formulario--imagen {
+        display: none; /* Ocultar imagen en tablet */
+    }
+}
+
+
+
+
+/* Ajustes para versión móvil (pantallas con un ancho máximo de 480px) */
+@media (max-width: 480px) {
+    /* Cabecera */
+    .cabecera--menu {
+        display: none; /* Ocultar los enlaces de la cabecera (Sobre mí, Skills, Hobbies, Formación, Proyectos) */
+    }
+
+    .cabecera--titulo {
+        width: 100%;
+        display: flex;
+        flex-direction: column; /* Centrar el contenido */
+        justify-content: center;
+        text-align: center; /* Centrar el texto */
+    }
+
+    .cabecera--titulo .foto {
+        width: 120px; /* Tamaño ajustado para la foto */
+        height: 120px;
+        object-fit: cover;
+        border-radius: 50%; /* Hacer la foto redonda */
+        margin: 20px 0; /* Espaciado encima y debajo de la foto */
+        align-self: center; /* Centrar la foto */
+    }
+
+    .cabecera--titulo .email {
+        font-size: 16px; /* Tamaño ajustado para el correo */
+        margin-top: 10px; /* Espaciado superior */
+    }
+
+    /* Formación Académica (poner los recuadros uno debajo del otro) */
+    .formacion--contenedor {
+        display: flex;
+        flex-direction: column; /* Apilar los recuadros uno debajo del otro */
+        gap: 16px; /* Espaciado entre los recuadros */
+    }
+
+    .recuadro-formacion {
+        width: 100%; /* Los recuadros ocupan todo el ancho disponible */
+        height: auto; /* Altura automática */
+    }
+
+    /* Skills y Hobbies (ajustar para 3 filas de 2 columnas) */
+    .skills, .hobbies {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas por fila */
+        gap: 16px;
+    }
+
+    .recuadro {
+        width: 100%; /* Ancho al 100% */
+        height: 250px;
+    }
+
+    /* Formulario de contacto - ocultar la imagen de contacto */
+    .formulario--contacto .imagen-contacto {
+        display: none; /* Ocultar la imagen de contacto */
+    }
+
+    /* Proyectos - Ajustar la posición de imagen y botones */
+    .proyectos .proyecto {
+        display: flex;
+        flex-direction: column; /* Imagen arriba, botones abajo */
+        align-items: center;
+    }
+
+    .proyecto .imagen {
+        width: 100%;
+        height: 200px; /* Tamaño ajustado para la imagen */
+        object-fit: cover;
+        margin-bottom: 20px; /* Espaciado debajo de la imagen */
+    }
+
+    .proyecto .botones {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .formulario--imagen {
+        display: none; /* Ocultar imagen en tablet */
+    }
+}

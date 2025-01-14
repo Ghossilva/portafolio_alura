@@ -1,0 +1,223 @@
+:root{
+    --main-color: #F3F5FC;
+    --dark-blue: #0A3871;
+    --light-blue: #D8DFE8;
+    --inter-font: "Inter", sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: var(--main-color);
+    font-family: var(--inter-font);
+    margin: 0;
+}
+
+header{
+    width: 60%;
+    padding: 40px 0px 80px 40px;
+}
+
+main{
+    display: flex;
+    justify-content: space-around;
+    padding: 0 0 0 40px;
+}
+
+.header__img{
+    width: 120px;
+    height: 48px;
+}
+
+
+.form__section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70dvh;
+}
+
+.form__input{
+    width: 100%;
+    max-width: 577px;
+    height: 65dvh;
+    /*Lo dejó en 64dvh */
+    background-color: transparent;
+    border-color: transparent;
+    outline: none;
+    color: var(--dark-blue);
+    font-family: var(--inter-font);
+    font-size: 3.2rem;
+    margin-bottom: 3rem;
+    overflow: auto;
+}
+
+::placeholder{
+    color: var(--dark-blue);
+}
+
+.alert__msj{
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    font-size: 1.5rem;
+    /*Le puso al font size 1.2 rem */
+    margin-bottom: 1.5rem;
+}
+
+.submit__container{
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding-right: 20px;
+}
+
+.form__btn__encriptar{
+    background: var(--dark-blue);
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    border: 1px solid var(--dark-blue);
+}
+
+.form__btn__desencriptar{
+    background: transparent;
+    color: var(--dark-blue);
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    border: 1px solid var(--dark-blue);
+}
+
+.form__btn__copiar{
+    background: transparent;
+    color: var(--dark-blue);
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    border: 1px solid var(--dark-blue);
+    margin-bottom: 20px;
+}
+
+.hidden{
+    display: none;
+}
+
+.result__section{
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+    height: 90vh;
+    /*También sirve en 72dvh*/
+    border-radius: 32px;
+    width: 100%;
+    max-width: 40rem;
+    box-shadow: 0.125rem 0.125rem 0.75rem 0.0625rem rgba(182, 182, 182, 0.2);
+    margin-top: -130px;
+}
+
+.result__title{
+    font-size: 2em;
+}
+
+.result__text {
+    font-size: 1.2em;
+}
+
+.result__img{
+    display: block;
+}
+
+@media screen and (max-width:768px) {
+    main{
+        flex-direction: column;
+        padding: 0 40px 0 40px;
+    }
+
+    header{
+        padding: 73.42px 0px 116px 40px;
+    }
+
+    .submit__container{
+        justify-content: center;
+        padding-right: 0%;
+    }
+
+    .form__section{
+        height: 34vh;
+    }
+
+    .result__section{
+        height: auto;
+        max-width: 624px;
+        margin-top: 2rem;
+        min-height: 186px;
+    }
+
+    .result__img{
+        display: none;
+    }
+
+    .header__img{
+        width: 31px;
+        height: 50px;
+    }
+
+}
+
+@media screen and (max-width:495px) {
+    .form__btn__copiar{
+        width: 260px;
+    }
+    
+}
+
+@media screen and (max-width:375px) {
+    header{
+        padding: 24px 0px 24px 16px;
+    }
+
+    main{
+        padding: 0 16px 0 16px;
+    }
+
+    .form__section{
+        height: 48vh;
+    }
+
+    .form__input{
+        padding-top: 56px;
+    }
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    color: #000;
+    width: 4px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    box-shadow: 19px 0 0 7px, 38px 0 0 3px, 57px 0 0 0;
+    transform: translateX(-38px) translateY(50px);
+    animation: l21 .5s infinite alternate linear;
+  }
+  
+  @keyframes l21 {
+    50%  {box-shadow: 19px 0 0 3px, 38px 0 0 7px, 57px 0 0 3px}
+    100% {box-shadow: 19px 0 0 0  , 38px 0 0 3px, 57px 0 0 7px}
+  }
+  

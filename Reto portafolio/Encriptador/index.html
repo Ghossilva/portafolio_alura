@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es-ve">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Encriptador de Texto</title>
+        <!--Puedo añadir un css con estilos reset para navegadores antiguos-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <header>
+            <img class="header__img" src="./images/icons/logo-alura.svg" alt="Logo de Alura">
+        </header>
+        <main>
+            <form class="form__section">
+                <textarea class="form__input" name="" id="" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+                <div class="btn__container">
+                    <div class="alert__msj"><img src="./images/icons/circulo-exclamacion.svg" alt="ícono de exclamación">
+                        <span>Solo letras minúsculas y sin acentos</span>
+                    </div>
+                </div>
+                <div class="submit__container">
+                    <input class="form__btn__encriptar" type="submit" value="Encriptar">
+                    <input class="form__btn__desencriptar" type="submit" value="Desencriptar">
+                </div>
+            </form>
+            <aside class="result__section">
+                <img class="result__img" src="./images/muneco.svg" alt="Muñeco" class="result__img">
+                <div class="loader hidden"></div>   
+                    <div class="result__container">
+                        <h3 class="result__title">Ningún mensaje fue encontrado</h3>
+                        <p class="result__text">Ingresa el texto que desees encriptar o desencriptar.</p>
+                        <button class="result_btn form__btn__copiar hidden">Copiar</button>
+                        <!--Revisar si queda o no oculto el botón-->
+                    </div>
+            </aside>
+            <script src="./scripts/encryptDecrypt.js"></script>
+        </main>
+      
+        <!--No desarrollé el footer porque el proyecto de encriptador de texto no lo pide
+        <footer>
+
+        </footer>
+        -->
+    </body>
+</html>
